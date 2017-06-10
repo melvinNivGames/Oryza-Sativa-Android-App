@@ -4,28 +4,44 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_first_layout"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="First Layout" />
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Graph: Temperature (Grains)" />
         <item
             android:id="@+id/nav_second_layout"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Second Layout" />
+            android:title="Graph: Moisture (Grains)" />
         <item
             android:id="@+id/nav_third_layout"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Third Layout" />
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Graph: Temperature (WH)" />
+        <item
+            android:id="@+id/nav_fourth_layout"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Graph: Moisture (WH)" />
+        <item
+            android:id="@+id/nav_fifth_layout"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Graphical Representation" />
+        <item
+            android:id="@+id/nav_sixth_layout"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Data Reports" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="About">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_project"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="Thesis" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_dev"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Dev Team" />
+            <item
+                android:id="@+id/nav_email"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Email" />
         </menu>
     </item>
 

@@ -106,12 +106,6 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, new SixthFragment())
                     .commit();
-        } else if (id == R.id.nav_project) {
-
-        } else if (id == R.id.nav_dev) {
-
-        } else if (id == R.id.nav_email) {
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

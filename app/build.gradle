@@ -19,6 +19,12 @@ android {
     }
 }
 
+repositories {
+    maven {
+        url 'https://dl.bintray.com/sj/maven/'
+    }
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -29,4 +35,5 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     compile files('libs/GraphView-4.2.1.jar')
+    compile 'com.numetriclabz.numandroidcharts:numandroidcharts:1.0.12'
 }

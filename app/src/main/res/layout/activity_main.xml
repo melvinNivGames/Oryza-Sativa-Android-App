@@ -21,11 +21,4 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer" />
-
-    <com.numetriclabz.numandroidcharts.GaugeChart
-        android:layout_width="400dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/gauge_chart"/>
-
 </android.support.v4.widget.DrawerLayout>

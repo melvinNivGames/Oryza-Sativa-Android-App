@@ -4,19 +4,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_first_layout"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_show_chart_black_24dp"
             android:title="Graph: Temperature" />
         <item
             android:id="@+id/nav_second_layout"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_show_chart_black_24dp"
             android:title="Graph: Moisture" />
         <item
             android:id="@+id/nav_third_layout"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Graphical Representation" />
+            android:icon="@drawable/ic_multiline_chart_black_24dp"
+            android:title="Graphical Representations" />
         <item
             android:id="@+id/nav_fourth_layout"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_insert_chart_black_24dp"
             android:title="Data Reports" />
     </group>
 
@@ -24,12 +24,8 @@
         <menu>
             <item
                 android:id="@+id/nav_fifth_layout"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="Thesis" />
-            <item
-                android:id="@+id/nav_sixth_layout"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Contact" />
+                android:icon="@drawable/ic_person_black_24dp"
+                android:title="Author" />
         </menu>
     </item>
 

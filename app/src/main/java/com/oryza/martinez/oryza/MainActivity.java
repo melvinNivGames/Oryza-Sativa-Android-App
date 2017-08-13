@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.numetriclabz.numandroidcharts.ChartData;
 import com.numetriclabz.numandroidcharts.GaugeChart;
@@ -22,6 +23,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    FragmentManager fragmentManager = getFragmentManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        fragmentManager.beginTransaction()
+                .replace(R.id.content_frame, new Initial())
+                .commit();
     }
 
     @Override
@@ -74,8 +80,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_exit) {
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -92,30 +98,35 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, new FirstFragment())
                     .commit();
+            loading();
         } else if (id == R.id.nav_second_layout) {
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, new SecondFragment())
                     .commit();
+            loading();
         } else if (id == R.id.nav_third_layout) {
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, new ThirdFragment())
                     .commit();
+            loading();
         } else if (id == R.id.nav_fourth_layout) {
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, new FourthFragment())
                     .commit();
+            Toast.makeText(getApplicationContext(), "Soon...", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_fifth_layout) {
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, new FifthFragment())
                     .commit();
-        } else if (id == R.id.nav_sixth_layout) {
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame, new SixthFragment())
-                    .commit();
+            Toast.makeText(getApplicationContext(), "Soon...", Toast.LENGTH_SHORT).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void loading() {
+        Toast.makeText(getApplicationContext(), "Loading...", Toast.LENGTH_SHORT).show();
     }
 }
